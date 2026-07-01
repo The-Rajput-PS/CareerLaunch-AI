@@ -1,0 +1,156 @@
+/* ==========================================================
+   TYPOGRAPHY.CSS
+   Global Typography System
+   ========================================================== */
+
+/* ==========================================
+   Body Text
+========================================== */
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-normal);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Headings
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-extrabold);
+}
+
+h2 {
+    font-size: var(--fs-3xl);
+}
+
+h3 {
+    font-size: var(--fs-2xl);
+}
+
+h4 {
+    font-size: var(--fs-xl);
+}
+
+h5 {
+    font-size: var(--fs-lg);
+}
+
+h6 {
+    font-size: var(--fs-md);
+}
+
+/* ==========================================
+   Paragraphs
+========================================== */
+
+p {
+    color: var(--text-muted);
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Small Text
+========================================== */
+
+small {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Labels
+========================================== */
+
+label {
+    display: inline-block;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   Text Utilities
+========================================== */
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--text-white) !important;
+}
+
+/* ==========================================
+   Font Weight Utilities
+========================================== */
+
+.fw-light {
+    font-weight: var(--fw-light);
+}
+
+.fw-normal {
+    font-weight: var(--fw-normal);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+.fw-semibold {
+    font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-extrabold {
+    font-weight: var(--fw-extrabold);
+}
+
+/* ==========================================
+   Gradient Text
+========================================== */
+
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

@@ -1,0 +1,154 @@
+/* ==========================================================
+   BUTTONS.CSS
+   Reusable Button Components
+   ========================================================== */
+
+
+/* ==========================================
+   Common Button Styles
+========================================== */
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    min-height:var(--button-height);
+
+    padding:14px 28px;
+
+    font-size:var(--fs-base);
+    font-weight:var(--fw-semibold);
+
+    border-radius:var(--radius-md);
+
+    transition:var(--transition);
+
+    text-decoration:none;
+
+}
+
+
+/* ==========================================
+   Primary Button
+========================================== */
+
+.btn-primary-custom{
+
+    background:var(--primary-gradient);
+
+    color:var(--text-white);
+
+    border:none;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.btn-primary-custom:hover{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--secondary-dark)
+    );
+
+    color:var(--text-white);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.btn-primary-custom:active{
+
+    transform:scale(.98);
+
+}
+
+.btn-primary-custom:focus{
+
+    color:var(--text-white);
+
+    box-shadow:
+        0 0 0 .25rem rgba(37,99,235,.25);
+
+}
+
+
+/* ==========================================
+   Secondary Button
+========================================== */
+
+.btn-secondary-custom{
+
+    background:var(--surface);
+
+    color:var(--text-primary);
+
+    border:1px solid var(--border-color);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.btn-secondary-custom:hover{
+
+    background:var(--text-primary);
+
+    color:var(--text-white);
+
+    border-color:var(--text-primary);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.btn-secondary-custom:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ==========================================
+   Outline Button
+========================================== */
+
+.btn-outline-custom{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-outline-custom:hover{
+
+    background:var(--primary);
+
+    color:var(--text-white);
+
+}
+
+
+/* ==========================================
+   Disabled Button
+========================================== */
+
+.btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}

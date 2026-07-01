@@ -1,0 +1,96 @@
+/* ==========================================================
+   ANIMATIONS.CSS
+   Global Animations
+   ========================================================== */
+
+
+/* ==========================================
+   Floating Dashboard
+========================================== */
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   Progress Bar Animation
+========================================== */
+
+@keyframes growProgress{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+
+/* ==========================================
+   Fade In Left
+========================================== */
+
+@keyframes fadeInLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   Fade In Right
+========================================== */
+
+@keyframes fadeInRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}

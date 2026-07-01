@@ -1,0 +1,164 @@
+/* ==========================================================
+   TRUSTED.CSS
+   Trusted Companies Component
+   ========================================================== */
+
+
+/* ==========================================
+   Trusted Section
+========================================== */
+
+.trusted{
+
+    padding:90px 0;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================
+   Section Heading
+========================================== */
+
+.trusted-title{
+
+    font-size:var(--fs-lg);
+
+    color:var(--text-muted);
+
+    font-weight:var(--fw-medium);
+
+    margin-bottom:40px;
+
+}
+
+
+/* ==========================================
+   Company Pills Container
+========================================== */
+
+.company-pills{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+/* ==========================================
+   Company Pill
+========================================== */
+
+.company-pills a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:170px;
+
+    height:60px;
+
+    padding:0 28px;
+
+    background:var(--surface);
+
+    color:var(--text-primary);
+
+    text-decoration:none;
+
+    font-size:var(--fs-base);
+
+    font-weight:var(--fw-semibold);
+
+    border:1px solid var(--border-light);
+
+    border-radius:var(--radius-pill);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:all .35s ease;
+
+}
+
+
+/* ==========================================
+   Hover Effect
+========================================== */
+
+.company-pills a:hover{
+
+    color:var(--text-white);
+
+    background:var(--primary-gradient);
+
+    border-color:transparent;
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+/* ==========================================
+   Active State
+========================================== */
+
+.company-pills a:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* ==========================================
+   Focus State
+========================================== */
+
+.company-pills a:focus{
+
+    outline:none;
+
+    color:var(--text-white);
+
+}
+
+
+/* ==========================================
+   Small Hover Animation
+========================================== */
+
+.company-pills a::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    margin-right:10px;
+
+    border-radius:50%;
+
+    background:var(--success);
+
+    transition:var(--transition);
+
+}
+
+.company-pills a:hover::before{
+
+    background:white;
+
+}

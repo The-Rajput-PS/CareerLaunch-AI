@@ -1,0 +1,97 @@
+/* ==========================================================
+   FEATURES.CSS
+========================================================== */
+
+.features {
+  background: var(--surface-light);
+}
+
+.features-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 22px;
+
+  box-shadow: var(--shadow-md);
+
+  transition: 0.35s;
+
+  border: 1px solid var(--border-light);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 5px;
+
+  background: var(--primary-gradient);
+
+  transform: scaleX(0);
+
+  transition: 0.35s;
+
+  transform-origin: left;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: var(--shadow-xl);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon {
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: var(--primary-gradient);
+
+  color: white;
+
+  font-size: 30px;
+
+  margin-bottom: 24px;
+}
+
+.feature-card h4 {
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  margin: 0;
+}

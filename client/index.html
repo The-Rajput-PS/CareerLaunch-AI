@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CareerLaunch AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ===================================================== -->
+    <!-- Navbar -->
+    <!-- ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">
+          <span class="career-text">Career</span>
+
+          <span class="launch-text">Launch</span>
+
+          <span class="ai-badge">AI</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#features"> Features </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#roadmap"> Roadmap </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#companies"> Companies </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================================================== -->
+    <!-- Hero Section -->
+    <!-- ===================================================== -->
+
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+
+          <div class="col-lg-6">
+            <span class="hero-badge"> 🚀 AI Powered Placement Platform </span>
+
+            <h1 class="hero-title">
+              Ace Your
+
+              <span class="gradient-text"> Placements </span>
+
+              with Confidence.
+            </h1>
+
+            <p class="hero-description">
+              CareerLaunch AI creates personalized company-specific roadmaps
+              that help students prepare smarter, track progress, and stay
+              consistent throughout their placement journey.
+            </p>
+
+            <!-- Company Selector -->
+
+            <div class="company-box">
+              <label for="company"> Select Your Dream Company </label>
+
+              <select id="company" class="form-select mt-2">
+                <option>TCS</option>
+
+                <option>Infosys</option>
+
+                <option>Accenture</option>
+
+                <option>Capgemini</option>
+
+                <option>Cognizant</option>
+
+                <option>Wipro</option>
+              </select>
+            </div>
+
+            <!-- CTA Buttons -->
+
+            <div class="hero-buttons">
+              <a
+                href="#roadmap"
+                class="btn btn-primary-custom"
+                aria-label="Build my placement roadmap"
+              >
+                Build My Roadmap
+              </a>
+
+              <a
+                href="#features"
+                class="btn btn-secondary-custom"
+                aria-label="Explore CareerLaunch AI features"
+              >
+                Explore Features
+              </a>
+            </div>
+
+            <div class="student-tag">
+              ⭐⭐⭐⭐⭐ Built by a student,
+
+              <strong>for students.</strong>
+            </div>
+          </div>
+
+          <!-- Right Dashboard -->
+
+          <div class="col-lg-6">
+            <div class="dashboard-card">
+              <div class="dashboard-header">
+                <h4>
+                  <i class="bi bi-map-fill"></i>
+
+                  My Placement Roadmap
+                </h4>
+
+                <span class="status-badge"> Active </span>
+              </div>
+
+              <!-- Company -->
+
+              <div class="dashboard-item">
+                <span> 🎯 Target Company </span>
+
+                <strong> TCS </strong>
+              </div>
+
+              <!-- Progress -->
+
+              <div class="dashboard-item">
+                <span> Overall Progress </span>
+
+                <strong> 78% </strong>
+              </div>
+
+              <div class="progress custom-progress">
+                <div class="progress-bar" style="width: 78%"></div>
+              </div>
+
+              <!-- Streak -->
+
+              <div class="dashboard-item mt-4">
+                <span> 🔥 Current Streak </span>
+
+                <strong> 12 Days </strong>
+              </div>
+
+              <!-- Tasks -->
+
+              <div class="task-box">
+                <h6>Today's Tasks</h6>
+
+                <ul>
+                  <li>✅ Arrays</li>
+
+                  <li>✅ SQL</li>
+
+                  <li>🟡 Resume Review</li>
+                </ul>
+              </div>
+
+              <!-- Next Milestone -->
+
+              <div class="next-goal">
+                <small> Next Milestone </small>
+
+                <h5>HR Interview</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- Trusted Companies -->
+    <!-- ===================================================== -->
+
+    <section id="companies" class="trusted section">
+      <div class="container">
+        <p class="trusted-title">Preparing Students for Opportunities At</p>
+
+        <div class="company-pills">
+          <a href="#">TCS</a>
+
+          <a href="#">Infosys</a>
+
+          <a href="#">Accenture</a>
+
+          <a href="#">Capgemini</a>
+
+          <a href="#">Cognizant</a>
+
+          <a href="#">Wipro</a>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================================== -->
+    <!-- Why CareerLaunch AI -->
+    <!-- ===================================================== -->
+
+    <section class="comparison">
+      <div class="container">
+        <div class="comparison-heading">
+          <h2>Why CareerLaunch AI?</h2>
+
+          <p>
+            Placement preparation shouldn't require switching between multiple
+            platforms. CareerLaunch AI brings everything together in one place.
+          </p>
+        </div>
+
+        <div class="comparison-wrapper">
+          <!-- Left -->
+
+          <div class="comparison-card problem">
+            <h3>Traditional Preparation</h3>
+
+            <div class="comparison-list">
+              <div class="comparison-item">
+                <i class="bi bi-x-circle-fill"></i>
+
+                <span>Multiple Websites</span>
+              </div>
+
+              <div class="comparison-item">
+                <i class="bi bi-x-circle-fill"></i>
+
+                <span>No Personalized Roadmap</span>
+              </div>
+
+              <div class="comparison-item">
+                <i class="bi bi-x-circle-fill"></i>
+
+                <span>No Progress Tracking</span>
+              </div>
+
+              <div class="comparison-item">
+                <i class="bi bi-x-circle-fill"></i>
+
+                <span>Scattered Resources</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- VS -->
+
+          <div class="vs-circle">VS</div>
+
+          <!-- Right -->
+
+          <div class="comparison-card solution">
+            <h3>CareerLaunch AI</h3>
+
+            <div class="comparison-list">
+              <div class="comparison-item">
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>One Unified Dashboard</span>
+              </div>
+
+              <div class="comparison-item">
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>AI Generated Roadmap</span>
+              </div>
+
+              <div class="comparison-item">
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>Daily Progress Tracking</span>
+              </div>
+
+              <div class="comparison-item">
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>Company Specific Preparation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====================================================== -->
+    <!-- HOW IT WORKS -->
+    <!-- ====================================================== -->
+
+    <section class="timeline section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"> How It Works </span>
+
+          <h2>Your Placement Journey</h2>
+
+          <p>
+            CareerLaunch AI guides you from choosing your dream company to
+            becoming interview ready through a personalized learning roadmap.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="bi bi-bullseye"></i>
+            </div>
+
+            <div class="timeline-content">
+              <h4>Choose Your Dream Company</h4>
+
+              <p>Select TCS, Infosys, Accenture or any target company.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+
+            <div class="timeline-content">
+              <h4>Generate AI Roadmap</h4>
+
+              <p>Receive a company-specific preparation roadmap.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="bi bi-journal-code"></i>
+            </div>
+
+            <div class="timeline-content">
+              <h4>Practice Daily</h4>
+
+              <p>Complete coding, aptitude and interview preparation tasks.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+
+            <div class="timeline-content">
+              <h4>Track Progress</h4>
+
+              <p>
+                Monitor your streak, completion percentage and upcoming
+                milestones.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon success">
+              <i class="bi bi-trophy-fill"></i>
+            </div>
+
+            <div class="timeline-content">
+              <h4>Crack Your Interview</h4>
+
+              <p>Walk into your placement interview with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================================== -->
+    <!-- FEATURES -->
+    <!-- ===================================================== -->
+
+    <section class="features section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"> Platform Features </span>
+
+          <h2>Everything You Need for Placements</h2>
+
+          <p>
+            CareerLaunch AI combines multiple placement preparation tools into
+            one intelligent platform.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-file-earmark-person"></i>
+            </div>
+
+            <h4>AI Resume Analyzer</h4>
+
+            <p>Analyze ATS score and receive actionable suggestions.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-diagram-3"></i>
+            </div>
+
+            <h4>Company Roadmaps</h4>
+
+            <p>Personalized preparation roadmap for every company.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-bar-chart-line"></i>
+            </div>
+
+            <h4>Progress Tracking</h4>
+
+            <p>Visualize your daily consistency and learning journey.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-building"></i>
+            </div>
+
+            <h4>Company Dashboard</h4>
+
+            <p>Interview pattern, resources and previous questions.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-journal-code"></i>
+            </div>
+
+            <h4>Coding Practice</h4>
+
+            <p>Practice DSA topics aligned with placement requirements.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+
+            <h4>AI Interview Mentor</h4>
+
+            <p>Prepare HR and technical interviews with AI guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================================== -->
+    <!-- PLATFORM STATS -->
+    <!-- ===================================================== -->
+
+    <section class="stats section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"> Platform Statistics </span>
+
+          <h2>Numbers That Inspire Confidence</h2>
+
+          <p>
+            CareerLaunch AI is designed to simplify placement preparation
+            through intelligent planning and continuous progress tracking.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h2>10K+</h2>
+
+            <p>Roadmaps Generated</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>50+</h2>
+
+            <p>Companies Supported</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>95%</h2>
+
+            <p>Learning Completion</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>120+</h2>
+
+            <p>Interview Resources</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================================== -->
+    <!-- AI RESUME ANALYZER -->
+    <!-- ===================================================== -->
+
+    <section class="resume-demo section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"> AI Resume Analyzer </span>
+
+          <h2>Improve Your Resume Before Applying</h2>
+
+          <p>
+            Upload your resume to receive an ATS compatibility score and
+            personalized improvement suggestions.
+          </p>
+        </div>
+
+        <div class="resume-container">
+          <!-- Upload Box -->
+
+          <div class="upload-card">
+            <i class="bi bi-cloud-arrow-up"></i>
+
+            <h4>Upload Resume</h4>
+
+            <p>Drag & Drop your PDF</p>
+
+            <button class="btn btn-primary-custom">Choose File</button>
+          </div>
+
+          <!-- Preview -->
+
+          <div class="resume-result">
+            <h4>ATS Compatibility</h4>
+
+            <div class="score-circle">89%</div>
+
+            <div class="result-list">
+              <div>
+                <i class="bi bi-check-circle-fill text-success"></i>
+
+                Keywords Optimized
+              </div>
+
+              <div>
+                <i class="bi bi-check-circle-fill text-success"></i>
+
+                Technical Skills
+              </div>
+
+              <div>
+                <i class="bi bi-check-circle-fill text-success"></i>
+
+                Projects Included
+              </div>
+
+              <div>
+                <i class="bi bi-exclamation-circle-fill text-warning"></i>
+
+                Add Certifications
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- Bootstrap JS -->
+    <!-- ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+/* ==========================================================
+   NAVBAR.CSS
+   Navigation Bar Component
+   ========================================================== */
+
+/* ==========================================
+   Navbar
+========================================== */
+
+.navbar {
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255,255,255,.92);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border-color);
+
+    padding: 18px 0;
+
+    transition: var(--transition);
+
+}
+
+/* ==========================================
+   Brand Logo
+========================================== */
+
+.navbar-brand {
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 30px;
+    font-weight: var(--fw-bold);
+
+    transition: var(--transition);
+
+}
+
+.navbar-brand:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================
+   Logo Text
+========================================== */
+
+.career-text {
+
+    color: var(--text-primary);
+
+}
+
+.launch-text {
+
+    background: var(--primary-gradient);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+/* ==========================================
+   AI Badge
+========================================== */
+
+.ai-badge {
+
+    background: var(--primary-gradient);
+
+    color: white;
+
+    padding: 6px 14px;
+
+    border-radius: var(--radius-pill);
+
+    font-size: var(--fs-sm);
+
+    font-weight: var(--fw-semibold);
+
+    letter-spacing: .8px;
+
+    box-shadow: var(--shadow-md);
+
+    transition: var(--transition);
+
+}
+
+.ai-badge:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================
+   Navigation Menu
+========================================== */
+
+.navbar-nav {
+
+    gap: 8px;
+
+}
+
+/* ==========================================
+   Navigation Links
+========================================== */
+
+.nav-link {
+
+    position: relative;
+
+    color: var(--text-primary);
+
+    font-weight: var(--fw-medium);
+
+    padding: 8px 14px !important;
+
+    border-radius: var(--radius-md);
+
+    transition: var(--transition);
+
+}
+
+.nav-link:hover {
+
+    color: var(--primary) !important;
+
+}
+
+/* ==========================================
+   Underline Animation
+========================================== */
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    bottom: 2px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--primary-gradient);
+
+    border-radius: 999px;
+
+    transition: width .3s ease;
+
+}
+
+.nav-link:hover::after {
+
+    width: calc(100% - 28px);
+
+}
+
+/* ==========================================
+   Active Link
+========================================== */
+
+.nav-link.active {
+
+    color: var(--primary) !important;
+
+}
+
+.nav-link.active::after {
+
+    width: calc(100% - 28px);
+
+}
+
+/* ==========================================
+   Navbar Toggler
+========================================== */
+
+.navbar-toggler {
+
+    border: none;
+
+}
+
+.navbar-toggler:focus {
+
+    box-shadow: none;
+
+}

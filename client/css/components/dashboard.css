@@ -1,0 +1,295 @@
+/* ==========================================================
+   DASHBOARD.CSS
+   Hero Dashboard Component
+   ========================================================== */
+
+
+/* ==========================================
+   Dashboard Card
+========================================== */
+
+.dashboard-card{
+
+    position:relative;
+
+    background:var(--surface);
+
+    padding:32px;
+
+    border-radius:var(--radius-xl);
+
+    border:1px solid var(--border-light);
+
+    box-shadow:var(--shadow-lg);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+
+/* ==========================================
+   Top Gradient Line
+========================================== */
+
+.dashboard-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--primary-gradient);
+
+}
+
+
+/* ==========================================
+   Hover Effect
+========================================== */
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+
+/* ==========================================
+   Dashboard Header
+========================================== */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:32px;
+
+}
+
+.dashboard-header h4{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:var(--fs-lg);
+
+    font-weight:var(--fw-bold);
+
+}
+
+
+/* ==========================================
+   Status Badge
+========================================== */
+
+.status-badge{
+
+    padding:7px 14px;
+
+    background:var(--success-light);
+
+    color:var(--success);
+
+    border-radius:var(--radius-pill);
+
+    font-size:13px;
+
+    font-weight:var(--fw-semibold);
+
+}
+
+
+/* ==========================================
+   Dashboard Items
+========================================== */
+
+.dashboard-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:22px 0;
+
+}
+
+.dashboard-item span{
+
+    color:var(--text-muted);
+
+    font-size:15px;
+
+}
+
+.dashboard-item strong{
+
+    font-weight:var(--fw-bold);
+
+}
+
+
+/* ==========================================
+   Progress Bar
+========================================== */
+
+.custom-progress{
+
+    height:12px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#E2E8F0;
+
+    margin-top:16px;
+
+}
+
+.progress-bar{
+
+    background:var(--primary-gradient);
+
+    animation:growProgress 1.8s ease forwards;
+
+}
+
+
+/* ==========================================
+   Today's Tasks
+========================================== */
+
+.task-box{
+
+    margin-top:36px;
+
+}
+
+.task-box h6{
+
+    margin-bottom:18px;
+
+    font-weight:var(--fw-bold);
+
+}
+
+.task-box ul{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.task-box li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--border-light);
+
+    color:var(--text-secondary);
+
+    transition:var(--transition);
+
+}
+
+.task-box li:last-child{
+
+    border-bottom:none;
+
+}
+
+.task-box li:hover{
+
+    padding-left:8px;
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================
+   Next Goal Card
+========================================== */
+
+.next-goal{
+
+    margin-top:34px;
+
+    padding:22px;
+
+    background:var(--primary-light);
+
+    border-radius:var(--radius-lg);
+
+}
+
+.next-goal small{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:var(--text-muted);
+
+}
+
+.next-goal h5{
+
+    color:var(--primary);
+
+    font-weight:var(--fw-bold);
+
+}
+
+
+/* ==========================================
+   Dashboard Decoration
+========================================== */
+
+.dashboard-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    right:-70px;
+
+    top:-70px;
+
+    background:rgba(37,99,235,.05);
+
+    border-radius:50%;
+
+}
