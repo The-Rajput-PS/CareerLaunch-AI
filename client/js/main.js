@@ -1,65 +1,42 @@
-/* ==========================================================
+/* ==========================================
    MAIN.JS
-   CareerLaunch AI
    Application Entry Point
-========================================================== */
+========================================== */
 
-const appState = {
+document.addEventListener("DOMContentLoaded", initializeApp);
 
-    user: {
+async function initializeApp() {
 
-        name: "Guest",
+    console.log("🚀 CareerLaunch AI Started");
 
-        company: "TCS",
+    // Load companies into dropdown
+    const companies = await API.getCompanies();
 
-        streak: 12,
+    UI.renderCompanies(companies);
 
-        progress: 78
+    // Add event listener to Build Roadmap button
+    const buildButton = document.getElementById("buildRoadmapBtn");
 
-    }
-
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    console.log("CareerLaunch AI Started 🚀");
-
-    initializeApp();
-
-});
-
-function initializeApp() {
-
-    console.log("Initializing application...");
-
-    updateGreeting();
+    buildButton.addEventListener("click", buildRoadmap);
 
 }
 
-function updateGreeting() {
+async function buildRoadmap() {
 
-    const hour = new Date().getHours();
+    const company =
+        document.getElementById("companySelect").value;
 
-    let greeting = "Welcome";
+    console.log("Selected Company:", company);
 
-    if (hour < 12) {
+    const roadmapData =
+        await API.getRoadmap(company);
 
-        greeting = "Good Morning";
+    console.log(roadmapData);
 
-    }
+    if (roadmapData) {
 
-    else if (hour < 17) {
-
-        greeting = "Good Afternoon";
-
-    }
-
-    else {
-
-        greeting = "Good Evening";
+        UI.updateRoadmap(roadmapData);
 
     }
-
-    console.log(greeting);
 
 }

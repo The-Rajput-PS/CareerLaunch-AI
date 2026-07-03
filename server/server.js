@@ -1,18 +1,33 @@
-// Import Express
-const express = require("express");
+require("dotenv").config();
 
-// Create Express application
+const express = require("express");
+const cors = require("cors");
+
+const connectDB = require("./config/database");
+
+const companyRoutes = require("./routes/companyRoutes");
+const roadmapRoutes = require("./routes/roadmapRoutes");
+
+const { PORT } = require("./config/env");
+
 const app = express();
 
-// Define Port
-const PORT = 3000;
+// Connect Database
+connectDB();
 
-// Home Route
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
 app.get("/", (req, res) => {
-    res.send("🚀 Welcome to CareerLaunch AI Backend!");
+    res.send("CareerLaunch AI Backend is Running 🚀");
 });
+
+app.use("/api/companies", companyRoutes);
+app.use("/api/roadmap", roadmapRoutes);
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

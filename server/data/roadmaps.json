@@ -1,0 +1,34 @@
+{
+    "TCS": [
+        "Java Basics",
+        "Arrays",
+        "SQL",
+        "Aptitude",
+        "Resume",
+        "HR Interview"
+    ],
+
+    "Infosys": [
+        "Java",
+        "DBMS",
+        "Operating System",
+        "SQL",
+        "Puzzle Solving"
+    ],
+
+    "Accenture": [
+        "Java",
+        "JavaScript",
+        "SQL",
+        "Coding Round",
+        "Communication"
+    ],
+
+    "Capgemini": [
+        "Java",
+        "SQL",
+        "Cloud Basics",
+        "Coding Assessment",
+        "Interview Preparation"
+    ]
+}

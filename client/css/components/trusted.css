@@ -3,162 +3,146 @@
    Trusted Companies Component
    ========================================================== */
 
-
 /* ==========================================
    Trusted Section
 ========================================== */
 
-.trusted{
+.trusted {
+  padding: 90px 0;
 
-    padding:90px 0;
-
-    text-align:center;
-
+  text-align: center;
 }
-
 
 /* ==========================================
    Section Heading
 ========================================== */
 
-.trusted-title{
+.trusted-title {
+  font-size: var(--fs-lg);
 
-    font-size:var(--fs-lg);
+  color: var(--text-muted);
 
-    color:var(--text-muted);
+  font-weight: var(--fw-medium);
 
-    font-weight:var(--fw-medium);
-
-    margin-bottom:40px;
-
+  margin-bottom: 40px;
 }
-
 
 /* ==========================================
    Company Pills Container
 ========================================== */
 
-.company-pills{
+.company-pills {
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  flex-wrap: wrap;
 
-    flex-wrap:wrap;
-
-    gap:20px;
-
+  gap: 20px;
 }
-
 
 /* ==========================================
    Company Pill
 ========================================== */
 
-.company-pills a{
+.company-pills a {
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  justify-content: center;
 
-    justify-content:center;
+  min-width: 170px;
 
-    min-width:170px;
+  height: 60px;
 
-    height:60px;
+  padding: 0 28px;
 
-    padding:0 28px;
+  background: var(--surface);
 
-    background:var(--surface);
+  color: var(--text-primary);
 
-    color:var(--text-primary);
+  text-decoration: none;
 
-    text-decoration:none;
+  font-size: var(--fs-base);
 
-    font-size:var(--fs-base);
+  font-weight: var(--fw-semibold);
 
-    font-weight:var(--fw-semibold);
+  border: 1px solid var(--border-light);
 
-    border:1px solid var(--border-light);
+  border-radius: var(--radius-pill);
 
-    border-radius:var(--radius-pill);
+  box-shadow: var(--shadow-sm);
 
-    box-shadow:var(--shadow-sm);
-
-    transition:all .35s ease;
-
+  transition: all 0.35s ease;
 }
-
 
 /* ==========================================
    Hover Effect
 ========================================== */
 
-.company-pills a:hover{
+.company-pills a:hover {
+  color: var(--text-white);
 
-    color:var(--text-white);
+  background: var(--primary-gradient);
 
-    background:var(--primary-gradient);
+  border-color: transparent;
 
-    border-color:transparent;
+  transform: translateY(-6px);
 
-    transform:translateY(-6px);
-
-    box-shadow:var(--shadow-lg);
-
+  box-shadow: var(--shadow-lg);
 }
-
-
-/* ==========================================
-   Active State
-========================================== */
-
-.company-pills a:active{
-
-    transform:scale(.97);
-
-}
-
 
 /* ==========================================
    Focus State
 ========================================== */
 
-.company-pills a:focus{
+.company-pills a:focus {
+  outline: none;
 
-    outline:none;
+  color: var(--text-primary);
 
-    color:var(--text-white);
+  background: var(--surface);
 
+  border-color: var(--primary-color);
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
 
+/* ==========================================
+   Active State
+========================================== */
+
+.company-pills a:active {
+  transform: translateY(-2px) scale(0.98);
+
+  color: var(--text-white);
+
+  background: var(--primary-gradient);
+}
 
 /* ==========================================
    Small Hover Animation
 ========================================== */
 
-.company-pills a::before{
+.company-pills a::before {
+  content: "";
 
-    content:"";
+  width: 8px;
 
-    width:8px;
+  height: 8px;
 
-    height:8px;
+  margin-right: 10px;
 
-    margin-right:10px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  background: var(--success);
 
-    background:var(--success);
-
-    transition:var(--transition);
-
+  transition: var(--transition);
 }
 
-.company-pills a:hover::before{
-
-    background:white;
-
+.company-pills a:hover::before {
+  background: white;
 }
