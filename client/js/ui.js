@@ -3,49 +3,94 @@
 ========================================== */
 
 const UI = {
+  renderCompanies(companies) {
+    const select = document.getElementById("companySelect");
 
-    renderCompanies(companies) {
+    if (!select) return;
 
-        const select = document.getElementById("companySelect");
+    select.innerHTML = "";
 
-        if (!select) return;
+    companies.forEach((company) => {
+      const option = document.createElement("option");
 
-        select.innerHTML = "";
+      option.value = company;
 
-        companies.forEach(company => {
+      option.textContent = company;
 
-            const option = document.createElement("option");
+      select.appendChild(option);
+    });
+  },
 
-            option.value = company;
+  updateRoadmap(data) {
+    // Company
+    document.getElementById("dashboardCompany").textContent = data.company;
 
-            option.textContent = company;
+    // Progress
+    const progress = data.progress ?? 0;
+    const streak = data.streak ?? 0;
 
-            select.appendChild(option);
+    document.getElementById("progressText").textContent = progress + "%";
 
-        });
+    document.getElementById("progressBar").style.width = progress + "%";
+    const streakElement = document.getElementById("currentStreak");
 
-    },
-
-    updateRoadmap(data) {
-
-        document.getElementById("dashboardCompany").textContent =
-            data.company;
-
-        const taskList =
-            document.getElementById("taskList");
-
-        taskList.innerHTML = "";
-
-        data.roadmap.forEach(task => {
-
-            const li = document.createElement("li");
-
-            li.textContent = "📘 " + task;
-
-            taskList.appendChild(li);
-
-        });
-
+    if (streakElement) {
+      streakElement.textContent = `${streak} ${streak === 1 ? "Day" : "Days"}`;
     }
 
+    // Task List
+    const taskList = document.getElementById("taskList");
+
+    taskList.innerHTML = "";
+
+    data.roadmap.forEach((task) => {
+      const taskData =
+        typeof task === "string"
+          ? {
+              title: task,
+              completed: false,
+            }
+          : task;
+
+      const li = document.createElement("li");
+
+      li.style.cursor = "pointer";
+
+      li.textContent = (taskData.completed ? "✅ " : "⬜ ") + taskData.title;
+
+      li.addEventListener("click", async () => {
+        if (taskData.completed) return;
+
+        const response = await API.completeTask(taskData.title);
+
+        if (!response || !response.success) {
+          Swal.fire({
+            icon: "error",
+            title: "Task Update Failed",
+            text: response?.message || "Please try again.",
+          });
+
+          return;
+        }
+
+        // Reload the latest roadmap from MongoDB
+        await window.loadSavedRoadmap();
+      });
+
+      taskList.appendChild(li);
+    });
+
+    // Next Milestone
+    const firstPending = data.roadmap.find((task) => {
+      if (typeof task === "string") return true;
+
+      return !task.completed;
+    });
+
+    document.getElementById("nextMilestone").textContent = firstPending
+      ? typeof firstPending === "string"
+        ? firstPending
+        : firstPending.title
+      : "🎉 Roadmap Completed";
+  },
 };

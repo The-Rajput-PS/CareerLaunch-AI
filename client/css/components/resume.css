@@ -2,6 +2,15 @@
    RESUME.CSS
 ========================================================== */
 
+@media(max-width:900px){
+
+.resume-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}
 .resume-demo {
   background: var(--surface-light);
 }
@@ -19,14 +28,13 @@
 .upload-card,
 .resume-result {
   background: white;
-
   border-radius: 24px;
-
   padding: 40px;
-
   box-shadow: var(--shadow-md);
-
   border: 1px solid var(--border-light);
+
+
+  animation: fadeIn .5s ease;
 }
 
 .upload-card {
@@ -52,27 +60,30 @@
 }
 
 .score-circle {
-  width: 140px;
 
-  height: 140px;
+  width:160px;
+  height:160px;
 
-  margin: 30px auto;
+  margin:30px auto;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: var(--primary-gradient);
+  background:var(--primary-gradient);
 
-  display: flex;
+  color:white;
 
-  justify-content: center;
+  display:flex;
 
-  align-items: center;
+  justify-content:center;
 
-  color: white;
+  align-items:center;
 
-  font-size: 42px;
+  font-size:48px;
 
-  font-weight: 700;
+  font-weight:700;
+
+  box-shadow:0 12px 30px rgba(37,99,235,.25);
+
 }
 
 .result-list {
@@ -91,4 +102,57 @@
   gap: 12px;
 
   font-weight: 500;
+}
+.result-section {
+  margin-top: 30px;
+}
+
+.result-section h4 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.result-section ul {
+  padding-left: 20px;
+}
+
+.result-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.best-company {
+  margin-top: 25px;
+  padding: 18px;
+  background: rgba(37,99,235,.08);
+  border-left: 5px solid var(--primary);
+  border-radius: 10px;
+}
+
+.best-company h4 {
+  margin-bottom: 8px;
+}
+
+#bestCompany {
+  font-weight: 600;
+}
+@keyframes fadeIn {
+
+  from{
+      opacity:0;
+      transform:translateY(25px);
+  }
+
+  to{
+      opacity:1;
+      transform:translateY(0);
+  }
+
+}
+.upload-card button {
+
+    margin-top:20px;
+
+    width:220px;
+
 }
