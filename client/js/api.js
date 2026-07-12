@@ -4,7 +4,10 @@
   ========================================== */
 
   const API = {
-    BASE_URL: "http://localhost:5000/api",
+    BASE_URL: BASE_URL:
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/api"
+    : "https://careerlaunch-ai-backend.onrender.com/",
 
     // ===========================
     // Helper
