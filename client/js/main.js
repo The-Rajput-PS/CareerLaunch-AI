@@ -15,7 +15,6 @@ async function initializeApp() {
   await loadSavedRoadmap();
 
   // Build Roadmap Button
-  // Build Roadmap Button
   document
     .getElementById("buildRoadmapBtn")
     .addEventListener("click", buildRoadmap);
