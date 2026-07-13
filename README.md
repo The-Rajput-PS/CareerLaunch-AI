@@ -86,7 +86,6 @@ CareerLaunch-AI
 │   └── architecture.png
 │
 ├── 📁 client/                      # Frontend
-│   ├── 📁 components/
 │   ├── 📁 css/
 │   │   ├── 📁 base/
 │   │   ├── 📁 components/
@@ -190,21 +189,37 @@ GROQ_API_KEY=
 # ⚙️ Workflow
 
 User
+
 ↓
+
 Register/Login
+
 ↓
+
 JWT Authentication
+
 ↓
+
 Choose Company
+
 ↓
+
 Generate Roadmap
+
 ↓
+
 Save Progress
+
 ↓
+
 Upload Resume
+
 ↓
+
 Groq AI
+
 ↓
+
 ATS Analysis
 
 # 🚀 Future Improvements
