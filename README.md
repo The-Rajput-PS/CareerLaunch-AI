@@ -1,9 +1,16 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/The-Rajput-PS/CareerLaunch-AI)
-![GitHub repo size](https://img.shields.io/github/repo-size/The-Rajput-PS/CareerLaunch-AI)
-![GitHub stars](https://img.shields.io/github/stars/The-Rajput-PS/CareerLaunch-AI?style=social)
-![License](https://img.shields.io/github/license/The-Rajput-PS/CareerLaunch-AI)
+<p align="center">
 
-🚀 CareerLaunch AI
+<img src="https://img.shields.io/github/last-commit/The-Rajput-PS/CareerLaunch-AI">
+<img src="https://img.shields.io/github/repo-size/The-Rajput-PS/CareerLaunch-AI">
+<img src="https://img.shields.io/github/license/The-Rajput-PS/CareerLaunch-AI">
+
+</p>
+
+<h1 align="center">🚀 CareerLaunch AI</h1>
+
+<p align="center">
+AI-powered Career Guidance Platform for Placement Preparation
+</p>
 
 AI-powered Career Guidance Platform that helps students prepare for placements through personalized company roadmaps and AI-driven ATS Resume Analysis.
 
@@ -218,4 +225,4 @@ https://github.com/The-Rajput-PS
 
 LinkedIn
 
-(Add your LinkedIn URL)
+https://www.linkedin.com/in/prasoon-kumar-singh/
