@@ -3,31 +3,17 @@
 ========================================================== */
 
 const Storage = {
+  save(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  },
 
-    save(key, value){
+  get(key) {
+    const value = localStorage.getItem(key);
 
-        localStorage.setItem(
-            key,
-            JSON.stringify(value)
-        );
+    return value ? JSON.parse(value) : null;
+  },
 
-    },
-
-    get(key){
-
-        const value =
-        localStorage.getItem(key);
-
-        return value
-            ? JSON.parse(value)
-            : null;
-
-    },
-
-    remove(key){
-
-        localStorage.removeItem(key);
-
-    }
-
+  remove(key) {
+    localStorage.removeItem(key);
+  },
 };

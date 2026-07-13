@@ -3,191 +3,157 @@
    Hero Section Component
    ========================================================== */
 
-
 /* ==========================================
    Hero Section
 ========================================== */
 
-.hero{
+.hero {
+  min-height: 90vh;
 
-    min-height:90vh;
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
-
-    background:var(--background);
-
+  background: var(--background);
 }
-
 
 /* ==========================================
    Hero Badge
 ========================================== */
 
-.hero-badge{
+.hero-badge {
+  display: inline-flex;
 
-    display:inline-flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 8px;
 
-    gap:8px;
+  padding: 10px 18px;
 
-    padding:10px 18px;
+  margin-bottom: 28px;
 
-    margin-bottom:28px;
+  background: var(--primary-light);
 
-    background:var(--primary-light);
+  color: var(--primary);
 
-    color:var(--primary);
+  border-radius: var(--radius-pill);
 
-    border-radius:var(--radius-pill);
+  font-size: var(--fs-sm);
 
-    font-size:var(--fs-sm);
-
-    font-weight:var(--fw-semibold);
-
+  font-weight: var(--fw-semibold);
 }
-
 
 /* ==========================================
    Hero Title
 ========================================== */
 
-.hero-title{
+.hero-title {
+  max-width: 620px;
 
-    max-width:620px;
+  margin-bottom: 24px;
 
-    margin-bottom:24px;
+  font-size: clamp(2.8rem, 5vw, 4rem);
 
-    font-size:clamp(2.8rem,5vw,4rem);
+  font-weight: var(--fw-extrabold);
 
-    font-weight:var(--fw-extrabold);
+  line-height: 1.15;
 
-    line-height:1.15;
-
-    letter-spacing:-1px;
-
+  letter-spacing: -1px;
 }
-
 
 /* ==========================================
    Hero Description
 ========================================== */
 
-.hero-description{
+.hero-description {
+  max-width: 580px;
 
-    max-width:580px;
+  margin-bottom: 36px;
 
-    margin-bottom:36px;
+  color: var(--text-muted);
 
-    color:var(--text-muted);
+  font-size: var(--fs-md);
 
-    font-size:var(--fs-md);
-
-    line-height:1.8;
-
+  line-height: 1.8;
 }
-
 
 /* ==========================================
    Company Selection
 ========================================== */
 
-.company-box{
+.company-box {
+  max-width: 420px;
 
-    max-width:420px;
-
-    margin-bottom:36px;
-
+  margin-bottom: 36px;
 }
 
-.company-box label{
+.company-box label {
+  display: block;
 
-    display:block;
-
-    margin-bottom:10px;
-
+  margin-bottom: 10px;
 }
 
-.company-box .form-select{
+.company-box .form-select {
+  height: 56px;
 
-    height:56px;
+  border-radius: var(--radius-md);
 
-    border-radius:var(--radius-md);
+  border: 1px solid var(--border-color);
 
-    border:1px solid var(--border-color);
+  box-shadow: none;
 
-    box-shadow:none;
-
-    transition:var(--transition);
-
+  transition: var(--transition);
 }
 
-.company-box .form-select:focus{
+.company-box .form-select:focus {
+  border-color: var(--primary);
 
-    border-color:var(--primary);
-
-    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
-
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
 }
-
 
 /* ==========================================
    Hero Buttons
 ========================================== */
 
-.hero-buttons{
+.hero-buttons {
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 18px;
 
-    gap:18px;
+  margin-bottom: 32px;
 
-    margin-bottom:32px;
-
-    flex-wrap:wrap;
-
+  flex-wrap: wrap;
 }
-
 
 /* ==========================================
    Student Tag
 ========================================== */
 
-.student-tag{
+.student-tag {
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 6px;
 
-    gap:6px;
+  color: var(--text-muted);
 
-    color:var(--text-muted);
-
-    font-size:var(--fs-sm);
-
+  font-size: var(--fs-sm);
 }
 
-.student-tag strong{
-
-    color:var(--text-primary);
-
+.student-tag strong {
+  color: var(--text-primary);
 }
-
 
 /* ==========================================
    Hero Left Content
 ========================================== */
 
-.hero .col-lg-6:first-child{
-
-    animation:fadeInLeft .8s ease;
-
+.hero .col-lg-6:first-child {
+  animation: fadeInLeft 0.8s ease;
 }
-.hero .col-lg-6:last-child{
-
-    animation:fadeInRight .8s ease;
-
+.hero .col-lg-6:last-child {
+  animation: fadeInRight 0.8s ease;
 }

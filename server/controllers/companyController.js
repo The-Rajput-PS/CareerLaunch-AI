@@ -3,36 +3,28 @@
 // ==========================================
 
 const getCompanies = (req, res) => {
+  const companies = [
+    "TCS",
+    "Infosys",
+    "Accenture",
+    "Capgemini",
+    "Wipro",
+    "Cognizant",
+    "IBM",
+    "Deloitte",
+    "PwC",
+    "EY",
+  ];
 
-    const companies = [
-
-        "TCS",
-        "Infosys",
-        "Accenture",
-        "Capgemini",
-        "Wipro",
-        "Cognizant",
-        "IBM",
-        "Deloitte",
-        "PwC",
-        "EY"
-
-    ];
-
-    res.json({
-
+  res.json({
     success: true,
 
     message: "Companies fetched successfully.",
 
-    data: companies
-
-});
-
+    data: companies,
+  });
 };
 
 module.exports = {
-
-    getCompanies
-
+  getCompanies,
 };

@@ -29,7 +29,7 @@ app.use(express.json());
 
 // Routes
 app.get("/", (req, res) => {
-    res.send("CareerLaunch AI Backend is Running 🚀");
+  res.send("CareerLaunch AI Backend is Running 🚀");
 });
 
 app.use("/api/user", userRoutes);
@@ -40,5 +40,5 @@ app.use("/api/ai", aiRoutes);
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

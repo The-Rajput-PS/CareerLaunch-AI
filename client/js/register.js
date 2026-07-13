@@ -14,9 +14,7 @@ form.addEventListener("submit", async (e) => {
     password: document.getElementById("password").value,
     college: document.getElementById("college").value.trim(),
     branch: document.getElementById("branch").value.trim(),
-    graduationYear: Number(
-      document.getElementById("graduationYear").value
-    ),
+    graduationYear: Number(document.getElementById("graduationYear").value),
   };
 
   try {

@@ -9,40 +9,34 @@ const { generateToken } = require("../utils/jwt");
 // ==========================================
 
 const registerUser = async (userData) => {
+  const { email, password } = userData;
 
-    const { email, password } = userData;
+  // Check if email already exists
+  const existingUser = await User.findOne({ email });
 
-    // Check if email already exists
-    const existingUser = await User.findOne({ email });
+  if (existingUser) {
+    throw new Error("Email already exists.");
+  }
 
-    if (existingUser) {
-        throw new Error("Email already exists.");
-    }
+  // Hash Password
+  const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Hash Password
-    const hashedPassword = await bcrypt.hash(password, 10);
+  // Save User
+  const user = await User.create({
+    ...userData,
 
-    // Save User
-    const user = await User.create({
+    password: hashedPassword,
+  });
 
-        ...userData,
+  return {
+    id: user._id,
 
-        password: hashedPassword
+    name: user.name,
 
-    });
+    email: user.email,
 
-    return {
-
-        id: user._id,
-
-        name: user.name,
-
-        email: user.email,
-
-        targetCompany: user.targetCompany
-
-    };
-
+    targetCompany: user.targetCompany,
+  };
 };
 
 // ==========================================
@@ -50,39 +44,32 @@ const registerUser = async (userData) => {
 // ==========================================
 
 const loginUser = async ({ email, password }) => {
+  const user = await User.findOne({ email });
 
+  if (!user) {
+    throw new Error("Invalid email or password.");
+  }
 
-    const user = await User.findOne({ email });
+  const isMatch = await bcrypt.compare(password, user.password);
 
+  if (!isMatch) {
+    throw new Error("Invalid email or password.");
+  }
 
-    if (!user) {
-        throw new Error("Invalid email or password.");
-    }
+  const token = generateToken(user._id);
 
-    const isMatch = await bcrypt.compare(password, user.password);
-
-
-
-    if (!isMatch) {
-        throw new Error("Invalid email or password.");
-    }
-
-    const token = generateToken(user._id);
-
-    return {
-        token,
-        user: {
-            id: user._id,
-            name: user.name,
-            email: user.email,
-            targetCompany: user.targetCompany
-        }
-    };
+  return {
+    token,
+    user: {
+      id: user._id,
+      name: user.name,
+      email: user.email,
+      targetCompany: user.targetCompany,
+    },
+  };
 };
 module.exports = {
+  registerUser,
 
-    registerUser,
-
-    loginUser
-
+  loginUser,
 };

@@ -6,13 +6,9 @@ const { analyzeResume } = require("../controllers/aiController");
 const router = express.Router();
 
 const upload = multer({
-    storage: multer.memoryStorage()
+  storage: multer.memoryStorage(),
 });
 
-router.post(
-    "/analyze",
-    upload.single("resume"),
-    analyzeResume
-);
+router.post("/analyze", upload.single("resume"), analyzeResume);
 
 module.exports = router;

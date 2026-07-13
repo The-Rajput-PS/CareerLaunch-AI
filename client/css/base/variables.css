@@ -5,176 +5,164 @@
    ========================================================== */
 
 :root {
-
-    /* ==========================================
+  /* ==========================================
        Brand Colors
     ========================================== */
 
-    --primary: #2563EB;
-    --primary-dark: #1D4ED8;
-    --primary-light: #DBEAFE;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #dbeafe;
 
-    --secondary: #7C3AED;
-    --secondary-dark: #6D28D9;
-    --secondary-light: #EDE9FE;
+  --secondary: #7c3aed;
+  --secondary-dark: #6d28d9;
+  --secondary-light: #ede9fe;
 
-    /* ==========================================
+  /* ==========================================
        Status Colors
     ========================================== */
 
-    --success: #10B981;
-    --success-light: #D1FAE5;
+  --success: #10b981;
+  --success-light: #d1fae5;
 
-    --warning: #F59E0B;
-    --warning-light: #FEF3C7;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
 
-    --danger: #EF4444;
-    --danger-light: #FEE2E2;
+  --danger: #ef4444;
+  --danger-light: #fee2e2;
 
-    --info: #0EA5E9;
+  --info: #0ea5e9;
 
-    /* ==========================================
+  /* ==========================================
        Background Colors
     ========================================== */
 
-    --background: #F8FAFC;
-    --surface: #FFFFFF;
-    --surface-light: #F1F5F9;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-light: #f1f5f9;
 
-    /* ==========================================
+  /* ==========================================
        Text Colors
     ========================================== */
 
-    --text-primary: #0F172A;
-    --text-secondary: #334155;
-    --text-muted: #64748B;
-    --text-white: #FFFFFF;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-white: #ffffff;
 
-    /* ==========================================
+  /* ==========================================
        Border Colors
     ========================================== */
 
-    --border-color: rgba(15, 23, 42, 0.08);
-    --border-light: rgba(15, 23, 42, 0.05);
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-light: rgba(15, 23, 42, 0.05);
 
-    /* ==========================================
+  /* ==========================================
        Gradients
     ========================================== */
 
-    --primary-gradient: linear-gradient(
-        135deg,
-        #2563EB,
-        #7C3AED
-    );
+  --primary-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
 
-    --hero-gradient: linear-gradient(
-        135deg,
-        #2563EB 0%,
-        #4F46E5 50%,
-        #7C3AED 100%
-    );
+  --hero-gradient: linear-gradient(
+    135deg,
+    #2563eb 0%,
+    #4f46e5 50%,
+    #7c3aed 100%
+  );
 
-    --card-gradient: linear-gradient(
-        180deg,
-        #FFFFFF,
-        #F8FAFC
-    );
+  --card-gradient: linear-gradient(180deg, #ffffff, #f8fafc);
 
-    /* ==========================================
+  /* ==========================================
        Shadows
     ========================================== */
 
-    --shadow-sm: 0 2px 8px rgba(15, 23, 42, .05);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
 
-    --shadow-md: 0 8px 24px rgba(15, 23, 42, .08);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
 
-    --shadow-lg:
-        0 10px 30px rgba(2, 6, 23, .08),
-        0 25px 80px rgba(37, 99, 235, .08);
+  --shadow-lg:
+    0 10px 30px rgba(2, 6, 23, 0.08), 0 25px 80px rgba(37, 99, 235, 0.08);
 
-    --shadow-xl:
-        0 20px 60px rgba(15, 23, 42, .15);
+  --shadow-xl: 0 20px 60px rgba(15, 23, 42, 0.15);
 
-    /* ==========================================
+  /* ==========================================
        Border Radius
     ========================================== */
 
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 18px;
-    --radius-xl: 24px;
-    --radius-pill: 999px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
 
-    /* ==========================================
+  /* ==========================================
        Typography
     ========================================== */
 
-    --font-family: "Inter", sans-serif;
+  --font-family: "Inter", sans-serif;
 
-    --fs-xs: 12px;
-    --fs-sm: 14px;
-    --fs-base: 16px;
-    --fs-md: 18px;
-    --fs-lg: 22px;
-    --fs-xl: 28px;
-    --fs-2xl: 36px;
-    --fs-3xl: 48px;
-    --fs-4xl: 60px;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: 22px;
+  --fs-xl: 28px;
+  --fs-2xl: 36px;
+  --fs-3xl: 48px;
+  --fs-4xl: 60px;
 
-    /* Font Weights */
+  /* Font Weights */
 
-    --fw-light: 300;
-    --fw-normal: 400;
-    --fw-medium: 500;
-    --fw-semibold: 600;
-    --fw-bold: 700;
-    --fw-extrabold: 800;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
 
-    /* ==========================================
+  /* ==========================================
        Spacing
     ========================================== */
 
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 32px;
-    --space-2xl: 48px;
-    --space-3xl: 64px;
-    --space-4xl: 96px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
 
-    /* ==========================================
+  /* ==========================================
        Container
     ========================================== */
 
-    --container-width: 1280px;
+  --container-width: 1280px;
 
-    /* ==========================================
+  /* ==========================================
        Navbar
     ========================================== */
 
-    --navbar-height: 80px;
+  --navbar-height: 80px;
 
-    /* ==========================================
+  /* ==========================================
        Buttons
     ========================================== */
 
-    --button-height: 52px;
+  --button-height: 52px;
 
-    /* ==========================================
+  /* ==========================================
        Cards
     ========================================== */
 
-    --card-padding: 30px;
+  --card-padding: 30px;
 
-    /* ==========================================
+  /* ==========================================
        Animations
     ========================================== */
 
-    --transition-fast: .2s ease;
+  --transition-fast: 0.2s ease;
 
-    --transition: .3s ease;
+  --transition: 0.3s ease;
 
-    --transition-slow: .5s ease;
-
+  --transition-slow: 0.5s ease;
 }

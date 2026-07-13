@@ -6,28 +6,27 @@ const navLogin = document.getElementById("navLogin");
 const welcomeUser = document.getElementById("welcomeUser");
 
 if (token && user) {
+  if (welcomeUser) {
+    welcomeUser.textContent = `👋 Hi, ${user.name.split(" ")[0]}`;
+  }
 
-    if (welcomeUser) {
-        welcomeUser.textContent = `👋 Hi, ${user.name.split(" ")[0]}`;
-    }
+  if (loginBtn) {
+    loginBtn.textContent = "Logout";
+    loginBtn.href = "#";
 
-    if (loginBtn) {
-        loginBtn.textContent = "Logout";
-        loginBtn.href = "#";
+    loginBtn.onclick = () => {
+      localStorage.clear();
+      location.reload();
+    };
+  }
 
-        loginBtn.onclick = () => {
-            localStorage.clear();
-            location.reload();
-        };
-    }
+  if (navLogin) {
+    navLogin.textContent = "Logout";
+    navLogin.href = "#";
 
-    if (navLogin) {
-        navLogin.textContent = "Logout";
-        navLogin.href = "#";
-
-        navLogin.onclick = () => {
-            localStorage.clear();
-            location.reload();
-        };
-    }
+    navLogin.onclick = () => {
+      localStorage.clear();
+      location.reload();
+    };
+  }
 }

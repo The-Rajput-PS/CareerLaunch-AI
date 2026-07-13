@@ -3,293 +3,241 @@
    Hero Dashboard Component
    ========================================================== */
 
-
 /* ==========================================
    Dashboard Card
 ========================================== */
 
-.dashboard-card{
+.dashboard-card {
+  position: relative;
 
-    position:relative;
+  background: var(--surface);
 
-    background:var(--surface);
+  padding: 32px;
 
-    padding:32px;
+  border-radius: var(--radius-xl);
 
-    border-radius:var(--radius-xl);
+  border: 1px solid var(--border-light);
 
-    border:1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
 
-    box-shadow:var(--shadow-lg);
+  overflow: hidden;
 
-    overflow:hidden;
+  transition: var(--transition);
 
-    transition:var(--transition);
-
-    animation:floatCard 6s ease-in-out infinite;
-
+  animation: floatCard 6s ease-in-out infinite;
 }
-
 
 /* ==========================================
    Top Gradient Line
 ========================================== */
 
-.dashboard-card::before{
+.dashboard-card::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  top: 0;
+  left: 0;
 
-    top:0;
-    left:0;
+  width: 100%;
 
-    width:100%;
+  height: 5px;
 
-    height:5px;
-
-    background:var(--primary-gradient);
-
+  background: var(--primary-gradient);
 }
-
 
 /* ==========================================
    Hover Effect
 ========================================== */
 
-.dashboard-card:hover{
+.dashboard-card:hover {
+  transform: translateY(-8px);
 
-    transform:translateY(-8px);
-
-    box-shadow:var(--shadow-xl);
-
+  box-shadow: var(--shadow-xl);
 }
-
 
 /* ==========================================
    Dashboard Header
 ========================================== */
 
-.dashboard-header{
+.dashboard-header {
+  display: flex;
 
-    display:flex;
+  justify-content: space-between;
 
-    justify-content:space-between;
+  align-items: center;
 
-    align-items:center;
-
-    margin-bottom:32px;
-
+  margin-bottom: 32px;
 }
 
-.dashboard-header h4{
+.dashboard-header h4 {
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 10px;
 
-    gap:10px;
+  font-size: var(--fs-lg);
 
-    font-size:var(--fs-lg);
-
-    font-weight:var(--fw-bold);
-
+  font-weight: var(--fw-bold);
 }
-
 
 /* ==========================================
    Status Badge
 ========================================== */
 
-.status-badge{
+.status-badge {
+  padding: 7px 14px;
 
-    padding:7px 14px;
+  background: var(--success-light);
 
-    background:var(--success-light);
+  color: var(--success);
 
-    color:var(--success);
+  border-radius: var(--radius-pill);
 
-    border-radius:var(--radius-pill);
+  font-size: 13px;
 
-    font-size:13px;
-
-    font-weight:var(--fw-semibold);
-
+  font-weight: var(--fw-semibold);
 }
-
 
 /* ==========================================
    Dashboard Items
 ========================================== */
 
-.dashboard-item{
+.dashboard-item {
+  display: flex;
 
-    display:flex;
+  justify-content: space-between;
 
-    justify-content:space-between;
+  align-items: center;
 
-    align-items:center;
-
-    margin:22px 0;
-
+  margin: 22px 0;
 }
 
-.dashboard-item span{
+.dashboard-item span {
+  color: var(--text-muted);
 
-    color:var(--text-muted);
-
-    font-size:15px;
-
+  font-size: 15px;
 }
 
-.dashboard-item strong{
-
-    font-weight:var(--fw-bold);
-
+.dashboard-item strong {
+  font-weight: var(--fw-bold);
 }
-
 
 /* ==========================================
    Progress Bar
 ========================================== */
 
-.custom-progress{
+.custom-progress {
+  height: 12px;
 
-    height:12px;
+  border-radius: 999px;
 
-    border-radius:999px;
+  overflow: hidden;
 
-    overflow:hidden;
+  background: #e2e8f0;
 
-    background:#E2E8F0;
-
-    margin-top:16px;
-
+  margin-top: 16px;
 }
 
-.progress-bar{
+.progress-bar {
+  background: var(--primary-gradient);
 
-    background:var(--primary-gradient);
-
-    animation:growProgress 1.8s ease forwards;
-
+  animation: growProgress 1.8s ease forwards;
 }
-
 
 /* ==========================================
    Today's Tasks
 ========================================== */
 
-.task-box{
-
-    margin-top:36px;
-
+.task-box {
+  margin-top: 36px;
 }
 
-.task-box h6{
+.task-box h6 {
+  margin-bottom: 18px;
 
-    margin-bottom:18px;
-
-    font-weight:var(--fw-bold);
-
+  font-weight: var(--fw-bold);
 }
 
-.task-box ul{
+.task-box ul {
+  margin: 0;
 
-    margin:0;
-
-    padding:0;
-
+  padding: 0;
 }
 
-.task-box li{
+.task-box li {
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 10px;
 
-    gap:10px;
+  padding: 12px 0;
 
-    padding:12px 0;
+  border-bottom: 1px solid var(--border-light);
 
-    border-bottom:1px solid var(--border-light);
+  color: var(--text-secondary);
 
-    color:var(--text-secondary);
-
-    transition:var(--transition);
-
+  transition: var(--transition);
 }
 
-.task-box li:last-child{
-
-    border-bottom:none;
-
+.task-box li:last-child {
+  border-bottom: none;
 }
 
-.task-box li:hover{
+.task-box li:hover {
+  padding-left: 8px;
 
-    padding-left:8px;
-
-    color:var(--primary);
-
+  color: var(--primary);
 }
-
 
 /* ==========================================
    Next Goal Card
 ========================================== */
 
-.next-goal{
+.next-goal {
+  margin-top: 34px;
 
-    margin-top:34px;
+  padding: 22px;
 
-    padding:22px;
+  background: var(--primary-light);
 
-    background:var(--primary-light);
-
-    border-radius:var(--radius-lg);
-
+  border-radius: var(--radius-lg);
 }
 
-.next-goal small{
+.next-goal small {
+  display: block;
 
-    display:block;
+  margin-bottom: 6px;
 
-    margin-bottom:6px;
-
-    color:var(--text-muted);
-
+  color: var(--text-muted);
 }
 
-.next-goal h5{
+.next-goal h5 {
+  color: var(--primary);
 
-    color:var(--primary);
-
-    font-weight:var(--fw-bold);
-
+  font-weight: var(--fw-bold);
 }
-
 
 /* ==========================================
    Dashboard Decoration
 ========================================== */
 
-.dashboard-card::after{
+.dashboard-card::after {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  width: 180px;
 
-    width:180px;
+  height: 180px;
 
-    height:180px;
+  right: -70px;
 
-    right:-70px;
+  top: -70px;
 
-    top:-70px;
+  background: rgba(37, 99, 235, 0.05);
 
-    background:rgba(37,99,235,.05);
-
-    border-radius:50%;
-
+  border-radius: 50%;
 }

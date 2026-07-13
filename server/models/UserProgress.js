@@ -1,61 +1,46 @@
 const mongoose = require("mongoose");
 
-const userProgressSchema = new mongoose.Schema({
-
+const userProgressSchema = new mongoose.Schema(
+  {
     user: {
+      type: mongoose.Schema.Types.ObjectId,
 
-        type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
 
-        ref: "User",
-
-        required: true
-
+      required: true,
     },
 
     company: {
+      type: String,
 
-        type: String,
-
-        required: true
-
+      required: true,
     },
 
     roadmap: [
+      {
+        title: String,
 
-        {
+        completed: {
+          type: Boolean,
 
-            title: String,
-
-            completed: {
-
-                type: Boolean,
-
-                default: false
-
-            }
-
-        }
-
+          default: false,
+        },
+      },
     ],
 
     progress: {
+      type: Number,
 
-        type: Number,
-
-        default: 0
-
-    }
-
-}, {
-
-    timestamps: true
-
-});
+      default: 0,
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
 module.exports = mongoose.model(
+  "UserProgress",
 
-    "UserProgress",
-
-    userProgressSchema
-
+  userProgressSchema,
 );

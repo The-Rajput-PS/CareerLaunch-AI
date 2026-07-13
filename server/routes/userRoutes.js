@@ -5,9 +5,9 @@ const router = express.Router();
 const { protect } = require("../middlewares/authMiddleware");
 
 const {
-    saveRoadmap,
-    getRoadmap,
-    completeTask
+  saveRoadmap,
+  getRoadmap,
+  completeTask,
 } = require("../controllers/userController");
 
 router.post("/roadmap", protect, saveRoadmap);

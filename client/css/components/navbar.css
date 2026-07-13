@@ -8,22 +8,20 @@
 ========================================== */
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
 
-    background: rgba(255,255,255,.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-color);
 
-    border-bottom: 1px solid var(--border-color);
+  padding: 18px 0;
 
-    padding: 18px 0;
-
-    transition: var(--transition);
-
+  transition: var(--transition);
 }
 
 /* ==========================================
@@ -31,22 +29,18 @@
 ========================================== */
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  font-size: 30px;
+  font-weight: var(--fw-bold);
 
-    font-size: 30px;
-    font-weight: var(--fw-bold);
-
-    transition: var(--transition);
-
+  transition: var(--transition);
 }
 
 .navbar-brand:hover {
-
-    transform: translateY(-2px);
-
+  transform: translateY(-2px);
 }
 
 /* ==========================================
@@ -54,20 +48,16 @@
 ========================================== */
 
 .career-text {
-
-    color: var(--text-primary);
-
+  color: var(--text-primary);
 }
 
 .launch-text {
+  background: var(--primary-gradient);
 
-    background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    background-clip: text;
-
+  background-clip: text;
 }
 
 /* ==========================================
@@ -75,31 +65,27 @@
 ========================================== */
 
 .ai-badge {
+  background: var(--primary-gradient);
 
-    background: var(--primary-gradient);
+  color: white;
 
-    color: white;
+  padding: 6px 14px;
 
-    padding: 6px 14px;
+  border-radius: var(--radius-pill);
 
-    border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
 
-    font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
 
-    font-weight: var(--fw-semibold);
+  letter-spacing: 0.8px;
 
-    letter-spacing: .8px;
+  box-shadow: var(--shadow-md);
 
-    box-shadow: var(--shadow-md);
-
-    transition: var(--transition);
-
+  transition: var(--transition);
 }
 
 .ai-badge:hover {
-
-    transform: translateY(-2px);
-
+  transform: translateY(-2px);
 }
 
 /* ==========================================
@@ -107,9 +93,7 @@
 ========================================== */
 
 .navbar-nav {
-
-    gap: 8px;
-
+  gap: 8px;
 }
 
 /* ==========================================
@@ -117,25 +101,21 @@
 ========================================== */
 
 .nav-link {
+  position: relative;
 
-    position: relative;
+  color: var(--text-primary);
 
-    color: var(--text-primary);
+  font-weight: var(--fw-medium);
 
-    font-weight: var(--fw-medium);
+  padding: 8px 14px !important;
 
-    padding: 8px 14px !important;
+  border-radius: var(--radius-md);
 
-    border-radius: var(--radius-md);
-
-    transition: var(--transition);
-
+  transition: var(--transition);
 }
 
 .nav-link:hover {
-
-    color: var(--primary) !important;
-
+  color: var(--primary) !important;
 }
 
 /* ==========================================
@@ -143,30 +123,26 @@
 ========================================== */
 
 .nav-link::after {
+  content: "";
 
-    content: "";
+  position: absolute;
 
-    position: absolute;
+  left: 14px;
+  bottom: 2px;
 
-    left: 14px;
-    bottom: 2px;
+  width: 0;
 
-    width: 0;
+  height: 2px;
 
-    height: 2px;
+  background: var(--primary-gradient);
 
-    background: var(--primary-gradient);
+  border-radius: 999px;
 
-    border-radius: 999px;
-
-    transition: width .3s ease;
-
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-
-    width: calc(100% - 28px);
-
+  width: calc(100% - 28px);
 }
 
 /* ==========================================
@@ -174,15 +150,11 @@
 ========================================== */
 
 .nav-link.active {
-
-    color: var(--primary) !important;
-
+  color: var(--primary) !important;
 }
 
 .nav-link.active::after {
-
-    width: calc(100% - 28px);
-
+  width: calc(100% - 28px);
 }
 
 /* ==========================================
@@ -190,13 +162,9 @@
 ========================================== */
 
 .navbar-toggler {
-
-    border: none;
-
+  border: none;
 }
 
 .navbar-toggler:focus {
-
-    box-shadow: none;
-
+  box-shadow: none;
 }

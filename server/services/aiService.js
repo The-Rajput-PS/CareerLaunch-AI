@@ -131,11 +131,9 @@ ${resumeText}
     ],
   });
 
-  const result = JSON.parse(
-    completion.choices[0].message.content
-);
+  const result = JSON.parse(completion.choices[0].message.content);
 
-const atsScore =
+  const atsScore =
     result.contact.quality +
     result.summary.quality +
     result.education.quality +
@@ -147,18 +145,14 @@ const atsScore =
     result.achievements.quality +
     result.grammar.quality;
 
-result.atsScore = Math.min(100, atsScore);
+  result.atsScore = Math.min(100, atsScore);
 
-if (atsScore >= 90)
-    result.grade = "Excellent";
-else if (atsScore >= 75)
-    result.grade = "Good";
-else if (atsScore >= 60)
-    result.grade = "Average";
-else
-    result.grade = "Needs Improvement";
+  if (atsScore >= 90) result.grade = "Excellent";
+  else if (atsScore >= 75) result.grade = "Good";
+  else if (atsScore >= 60) result.grade = "Average";
+  else result.grade = "Needs Improvement";
 
-return result;
+  return result;
 };
 
 module.exports = {

@@ -3,28 +3,17 @@
 ========================================================== */
 
 const Utils = {
+  greeting() {
+    const hour = new Date().getHours();
 
-    greeting(){
+    if (hour < 12) return "Good Morning";
 
-        const hour =
-        new Date().getHours();
+    if (hour < 17) return "Good Afternoon";
 
-        if(hour<12)
-            return "Good Morning";
+    return "Good Evening";
+  },
 
-        if(hour<17)
-            return "Good Afternoon";
-
-        return "Good Evening";
-
-    },
-
-    percentage(value,total){
-
-        return Math.round(
-            (value/total)*100
-        );
-
-    }
-
+  percentage(value, total) {
+    return Math.round((value / total) * 100);
+  },
 };

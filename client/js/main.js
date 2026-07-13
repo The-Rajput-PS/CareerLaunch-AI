@@ -6,11 +6,8 @@
 document.addEventListener("DOMContentLoaded", initializeApp);
 
 async function initializeApp() {
-  
-
   // Load companies
   const companies = await API.getCompanies();
-
 
   UI.renderCompanies(companies);
 

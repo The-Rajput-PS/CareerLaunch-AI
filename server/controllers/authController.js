@@ -1,9 +1,7 @@
 const {
+  registerUser,
 
-    registerUser,
-
-    loginUser
-
+  loginUser,
 } = require("../services/authService");
 
 // ==========================================
@@ -11,35 +9,23 @@ const {
 // ==========================================
 
 const register = async (req, res) => {
+  try {
+    const user = await registerUser(req.body);
 
-    try {
+    res.status(201).json({
+      success: true,
 
-        const user = await registerUser(req.body);
+      message: "User registered successfully.",
 
-        res.status(201).json({
+      data: user,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
 
-            success: true,
-
-            message: "User registered successfully.",
-
-            data: user
-
-        });
-
-    }
-
-    catch (error) {
-
-        res.status(400).json({
-
-            success: false,
-
-            message: error.message
-
-        });
-
-    }
-
+      message: error.message,
+    });
+  }
 };
 
 // ==========================================
@@ -47,41 +33,27 @@ const register = async (req, res) => {
 // ==========================================
 
 const login = async (req, res) => {
+  try {
+    const data = await loginUser(req.body);
 
-    try {
+    res.status(200).json({
+      success: true,
 
-        const data = await loginUser(req.body);
+      message: "Login successful.",
 
-        res.status(200).json({
+      data,
+    });
+  } catch (error) {
+    res.status(401).json({
+      success: false,
 
-            success: true,
-
-            message: "Login successful.",
-
-            data
-
-        });
-
-    }
-
-    catch (error) {
-
-        res.status(401).json({
-
-            success: false,
-
-            message: error.message
-
-        });
-
-    }
-
+      message: error.message,
+    });
+  }
 };
 
 module.exports = {
+  register,
 
-    register,
-
-    login
-
+  login,
 };
