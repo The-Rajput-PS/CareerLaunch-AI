@@ -1,54 +1,28 @@
 # 🚀 CareerLaunch AI
 
-An AI-powered career guidance platform that helps students prepare for placements through personalized company roadmaps and AI-driven ATS resume analysis.
+AI-powered Career Guidance Platform that helps students prepare for placements through personalized company roadmaps and AI-driven ATS Resume Analysis.
 
-🌐 Live Demo:
-https://career-launch-ai-two.vercel.app/
+---
 
-💻 Backend API:
-https://careerlaunch-ai-backend.onrender.com/
+## 🌐 Live Demo
 
-![CareerLaunch AI](assets/home.png)
+👉 https://career-launch-ai-two.vercel.app/
+
+## 💻 Backend API
+
+👉 https://careerlaunch-ai-backend.onrender.com/
+
+---
 
 ## ✨ Features
 
 - 🔐 JWT Authentication
 - 👤 User Registration & Login
 - 📄 AI Resume Analyzer
-- 🤖 Groq LLM Integration
-- 📊 ATS Score
+- 🤖 Groq AI Integration
+- 📊 Dynamic ATS Score
 - 🎯 Personalized Company Roadmaps
-- ✅ Task Progress Tracking
-- 📈 Dashboard
+- ✅ Progress Tracking
+- 📈 Interactive Dashboard
 - ☁️ MongoDB Atlas
-- 🌐 Fully Deployed
-
-## 🛠 Tech Stack
-
-Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-Backend
-- Node.js
-- Express.js
-
-Database
-- MongoDB Atlas
-
-Authentication
-- JWT
-- bcrypt
-
-AI
-- Groq API
-- Llama 3.3 70B
-
-Deployment
-- Render
-- Vercel
-
-## Status
-
-🚧 Currently under active development.
+- 🌍 Fully Deployed
