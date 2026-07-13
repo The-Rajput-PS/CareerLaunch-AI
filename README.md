@@ -1,4 +1,8 @@
-# 🚀 CareerLaunch AI
+![GitHub last commit](https://img.shields.io/github/last-commit/The-Rajput-PS/CareerLaunch-AI)
+![GitHub repo size](https://img.shields.io/github/repo-size/The-Rajput-PS/CareerLaunch-AI)
+![GitHub stars](https://img.shields.io/github/stars/The-Rajput-PS/CareerLaunch-AI?style=social)
+![License](https://img.shields.io/github/license/The-Rajput-PS/CareerLaunch-AI)
+🚀 CareerLaunch AI
 
 AI-powered Career Guidance Platform that helps students prepare for placements through personalized company roadmaps and AI-driven ATS Resume Analysis.
 
@@ -122,3 +126,95 @@ CareerLaunch-AI
 ## Resume Analyzer
 
 ![Resume](assets/resume.png)
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/The-Rajput-PS/CareerLaunch-AI.git
+```
+
+Go inside
+
+```bash
+cd CareerLaunch-AI
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run Backend
+
+```bash
+cd server
+
+npm install
+
+node server.js
+```
+
+Run Frontend
+
+Open
+
+client/index.html
+
+using Live Server.
+
+# 🔑 Environment Variables
+
+Create a .env file inside server
+
+```env
+PORT=
+
+MONGODB_URI=
+
+JWT_SECRET=
+
+GROQ_API_KEY=
+```
+
+# ⚙️ Workflow
+
+User
+↓
+Register/Login
+↓
+JWT Authentication
+↓
+Choose Company
+↓
+Generate Roadmap
+↓
+Save Progress
+↓
+Upload Resume
+↓
+Groq AI
+↓
+ATS Analysis
+
+# 🚀 Future Improvements
+
+- More company roadmaps
+- Resume templates
+- AI career recommendations
+- Email verification
+- Analytics dashboard
+
+# 👨‍💻 Author
+
+Prasoon Kumar Singh
+
+GitHub
+
+https://github.com/The-Rajput-PS
+
+LinkedIn
+
+(Add your LinkedIn URL)
