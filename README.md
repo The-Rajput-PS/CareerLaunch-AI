@@ -104,3 +104,21 @@ CareerLaunch-AI
 ├── package-lock.json
 └── README.md
 ```
+
+# 📸 Screenshots
+
+## Landing Page
+
+![Landing](assets/landing.png)
+
+---
+
+## Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+---
+
+## Resume Analyzer
+
+![Resume](assets/resume.png)
