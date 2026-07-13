@@ -2,6 +2,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/The-Rajput-PS/CareerLaunch-AI)
 ![GitHub stars](https://img.shields.io/github/stars/The-Rajput-PS/CareerLaunch-AI?style=social)
 ![License](https://img.shields.io/github/license/The-Rajput-PS/CareerLaunch-AI)
+
 🚀 CareerLaunch AI
 
 AI-powered Career Guidance Platform that helps students prepare for placements through personalized company roadmaps and AI-driven ATS Resume Analysis.
